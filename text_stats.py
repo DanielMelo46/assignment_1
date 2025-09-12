@@ -19,7 +19,7 @@ def remove_spaces(text):
 def word_list_gen(text):
     '''Generates a list of words from the text.'''
     words = remove_char(text).split(" ")
-    return words
+    return [word.lower() for word in words]
 
 def word_count(text):
     '''Counts the number of words in the text.
@@ -46,6 +46,10 @@ def avg_word(text):
     total_letters = sum(1 for char in all_words_join if char.isalpha()) 
     return f'{total_letters / word_count(text):.1f}'
 
+# def most_common_words(text):
+#     ''' This function will count the occurrences of each word'''
+#     counts = {} # Counts dictionary
+#     words
 
 
 
