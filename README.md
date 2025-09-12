@@ -13,6 +13,8 @@ Consider:
     - We don't take punctuation marks into account for this, so we'll get rid of them.
     - We want to leave the words separated evenly by something (space)
 - Unique word count
+Consider:
+    - We want a unique set of words, so we'll use set casting.
 - Character count (with and without spaces)
 - Average word length
 - Most common word(s) and their frequency
