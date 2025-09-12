@@ -21,10 +21,14 @@ def unique_words(text):
     words_list = remove_char(text).split(" ")
     return len(set(words_list))
 
+def characters_with_spaces(text):
+    '''Returns the number of characters in the text, including spaces.'''
+    return len(text)
+
 
 
 # Read data from the file called input.txt
 # Read it into a variable
 file_content = read_file('inputs/input_1.txt')
-print(unique_words(file_content))
+print(characters_with_spaces(file_content))
 
