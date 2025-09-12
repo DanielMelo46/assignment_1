@@ -11,7 +11,7 @@ def remove_char(text):
     return text
 
 def remove_spaces(text):
-    chars_to_remove = ['\s','\t','\n']
+    chars_to_remove = [' ','\t','\n']
     for char in chars_to_remove:
         text = text.replace(char,"")
     return text
@@ -31,7 +31,8 @@ def characters_with_spaces(text):
     '''Returns the number of characters in the text, including spaces.'''
     return len(text)
 
-#def characters_without_spaces(text):
+def characters_without_spaces(text):
+    return len(remove_spaces(text))
 
 
 
@@ -39,5 +40,5 @@ def characters_with_spaces(text):
 # Read data from the file called input.txt
 # Read it into a variable
 file_content = read_file('inputs/input_1.txt')
-print(characters_with_spaces(file_content))
+print(characters_without_spaces(file_content))
 
