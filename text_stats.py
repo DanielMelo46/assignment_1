@@ -39,8 +39,14 @@ def characters_with_spaces(text):
 def characters_without_spaces(text):
     return len(remove_spaces(text))
 
-#def avg_word(text):
-    #all_words = [word ]
+def avg_word(text):
+    all_words = word_list_gen(text)
+    all_words_join = ''.join(all_words) 
+    # Counting all the letters in the text
+    total_letters = sum(1 for char in all_words_join if char.isalpha()) 
+    return f'{total_letters / word_count(text):.1f}'
+
+
 
 
 
@@ -48,5 +54,5 @@ def characters_without_spaces(text):
 # Read data from the file called input.txt
 # Read it into a variable
 file_content = read_file('inputs/input_1.txt')
-print(characters_without_spaces(file_content))
+print(avg_word(file_content))
 
