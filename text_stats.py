@@ -10,6 +10,12 @@ def remove_char(text):
         text = text.replace(char,"")
     return text
 
+def remove_spaces(text):
+    chars_to_remove = ['\s','\t','\n']
+    for char in chars_to_remove:
+        text = text.replace(char,"")
+    return text
+
 def word_count(text):
     '''Counts the number of words in the text.
     It uses the remove_char function to clean the text first.'''
@@ -24,6 +30,9 @@ def unique_words(text):
 def characters_with_spaces(text):
     '''Returns the number of characters in the text, including spaces.'''
     return len(text)
+
+#def characters_without_spaces(text):
+
 
 
 
