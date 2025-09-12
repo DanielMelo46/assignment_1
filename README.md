@@ -16,5 +16,6 @@ Consider:
 Consider:
     - We want a unique set of words, so we'll use set casting.
 - **Character count (with and without spaces)**
-- Average word length
+- **Average word length**
+    - Perfom the specified operation : Total letters across all words ÷ word count
 - Most common word(s) and their frequency
