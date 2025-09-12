@@ -57,6 +57,19 @@ def most_common_words(text):
     most_common = [word for word, count in counts.items() if count == max_count]
     return f'Most common word(s): {', '.join(sorted(most_common))} ({max_count})'
 
+def printer(file_content):
+    """Prints various statistics about the text.
+
+    Args:
+        file_content (str): The content of the file to analyze.
+    """
+    print(f'Word count: {word_count(file_content)}')
+    print(f'Unique words: {unique_words(file_content)}')
+    print(f'Characters (with spaces): {characters_with_spaces(file_content)}')
+    print(f'Characters (no spaces): {characters_without_spaces(file_content)}')
+    print(f'Average word length: {avg_word(file_content)}')
+    print(f'Most common word(s): {most_common_words(file_content)}')
+
 
 
 
