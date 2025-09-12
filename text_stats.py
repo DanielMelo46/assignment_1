@@ -31,7 +31,7 @@ def unique_words(text):
     '''Returns a set of unique words from the text.'''
     words_list = word_list_gen(text)
     return len(set(words_list))
-
+ 
 def characters_with_spaces(text):
     '''Returns the number of characters in the text, including spaces.'''
     return len(text)
@@ -55,7 +55,7 @@ def most_common_words(text):
     max_count = max(counts.values())
     # Find the most common words
     most_common = [word for word, count in counts.items() if count == max_count]
-    return f'Most common word(s): {', '.join(sorted(most_common))} ({max_count})'
+    return f'{', '.join(sorted(most_common))} ({max_count})'
 
 def printer(file_content):
     """Prints various statistics about the text.
@@ -77,5 +77,5 @@ def printer(file_content):
 # Read data from the file called input.txt
 # Read it into a variable
 file_content = read_file('inputs/input_1.txt')
-print(most_common_words(file_content))
+printer(file_content)
 
