@@ -16,15 +16,20 @@ def remove_spaces(text):
         text = text.replace(char,"")
     return text
 
+def word_list_gen(text):
+    '''Generates a list of words from the text.'''
+    words = remove_char(text).split(" ")
+    return words
+
 def word_count(text):
     '''Counts the number of words in the text.
     It uses the remove_char function to clean the text first.'''
-    words_list = remove_char(text).split(" ")
+    words_list = word_list_gen(text)
     return len(words_list)
 
 def unique_words(text):
     '''Returns a set of unique words from the text.'''
-    words_list = remove_char(text).split(" ")
+    words_list = word_list_gen(text)
     return len(set(words_list))
 
 def characters_with_spaces(text):
@@ -33,6 +38,9 @@ def characters_with_spaces(text):
 
 def characters_without_spaces(text):
     return len(remove_spaces(text))
+
+#def avg_word(text):
+    #all_words = [word ]
 
 
 
