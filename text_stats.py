@@ -16,12 +16,15 @@ def word_count(text):
     words_list = remove_char(text).split(" ")
     return len(words_list)
 
-    
+def unique_words(text):
+    '''Returns a set of unique words from the text.'''
+    words_list = remove_char(text).split(" ")
+    return len(set(words_list))
+
+
+
 # Read data from the file called input.txt
 # Read it into a variable
 file_content = read_file('inputs/input_1.txt')
-print(file_content)
-print(word_count(file_content))
-
-
+print(unique_words(file_content))
 
