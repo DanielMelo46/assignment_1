@@ -4,7 +4,7 @@ I created a Python program that analyzes different text files and outputs useful
 This assignment will be divided by tasks in order to successfully present those statistics as an output file.
 ## Task 1
 - The program must read text from a file named exactly:
-`input.txt`
+`input_#.txt`
 ## Task 2
 Write functions that generate the following statistics from the text:
 
@@ -18,4 +18,7 @@ Consider:
 - **Character count (with and without spaces)**
 - **Average word length**
     - Perfom the specified operation : Total letters across all words ÷ word count
-- Most common word(s) and their frequency
+- **Most common word(s) and their frequency**
+Consider:
+    - Using a dictionary to match each word with its frequency.
+    - Using a dictionary comprehension to save lines of code by counting the number of occurrences per unique word (we'll use a set casting for this as well)
