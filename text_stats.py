@@ -2,13 +2,6 @@ def read_file(file_path):
     '''Reads the content of a file and returns it as a string.'''
     with open(file_path, 'r') as file:
         return file.read()
-    
-# def remove_char(text):
-#     '''Removes specific characters from the text.'''
-#     chars_to_remove = [',','.']
-#     for char in chars_to_remove:
-#         text = text.replace(char,"")
-#     return text
 
 def remove_spaces(text):
     chars_to_remove = [' ','\t','\n']
@@ -82,7 +75,7 @@ def printer(file_content):
 
 
 # Read data from the file called input.txt  
-file_content = read_file('inputs/input_1.txt')
-# printer(file_content)
-print(word_list_gen(file_content))
+file_content = read_file('inputs/input_3.txt')
+printer(file_content)
+
 
