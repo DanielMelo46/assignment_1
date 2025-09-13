@@ -1,3 +1,4 @@
+import os 
 def read_file(file_path):
     '''Reads the content of a file and returns it as a string.'''
     with open(file_path, 'r') as file:
@@ -60,22 +61,21 @@ def most_common_words(text):
     return f'{', '.join(sorted(most_common))} ({max_count})'
 
 def printer(file_content):
-    """Prints various statistics about the text.
+    """Creates a report of various statistics about the text.
 
     Args:
         file_content (str): The content of the file to analyze.
     """
-    print(f'Word count: {word_count(file_content)}')
-    print(f'Unique words: {unique_words(file_content)}')
-    print(f'Characters (with spaces): {characters_with_spaces(file_content)}')
-    print(f'Characters (no spaces): {characters_without_spaces(file_content)}')
-    print(f'Average word length: {avg_word(file_content)}')
-    print(f'Most common word(s): {most_common_words(file_content)}')
+    return (
+        f'Word count: {word_count(file_content)}\n'
+        f'Unique words: {unique_words(file_content)}\n'
+        f'Characters (with spaces): {characters_with_spaces(file_content)}\n'
+        f'Characters (no spaces): {characters_without_spaces(file_content)}\n'
+        f'Average word length: {avg_word(file_content)}\n'
+        f'Most common word(s): {most_common_words(file_content)}'
+    )
 
-
-
-# Read data from the file called input.txt  
-file_content = read_file('inputs/input_3.txt')
-printer(file_content)
-
-
+# Read data from the file called input.txt
+for file in list(os.listdir('inputs')):
+    file_content = read_file(f'inputs/{file}')
+    printer(file_content + '\n')
