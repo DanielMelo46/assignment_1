@@ -22,3 +22,6 @@ Consider:
 Consider:
     - Using a dictionary to match each word with its frequency.
     - Using a dictionary comprehension to save lines of code by counting the number of occurrences per unique word (we'll use a set casting for this as well)
+
+## Task 3: 
+Your program must write results to both the console and an output file names as output_#.txt
