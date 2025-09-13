@@ -1,0 +1,6 @@
+Word count: 85
+Unique words: 64
+Characters (with spaces): 454
+Characters (no spaces): 370
+Average word length: 4.2
+Most common word(s): a, the, was (4)

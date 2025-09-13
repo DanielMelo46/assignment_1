@@ -1,0 +1,6 @@
+Word count: 47
+Unique words: 41
+Characters (with spaces): 262
+Characters (no spaces): 218
+Average word length: 4.4
+Most common word(s): they, were (3)
