@@ -86,9 +86,9 @@ def main():
     for i, file in enumerate(list(os.listdir('inputs'))):
         # Read the content of the file
         file_content = read_file(f'inputs/{file}')
-        report = printer(file_content + '\n')
+        report = printer(file_content)
         # Write the report to an output file
-        write_file(f'outputs/output_{i}.txt', report)
-        
+        write_file(f'outputs/output_{i + 1}.txt', report)
+
 #Execution
 main()
