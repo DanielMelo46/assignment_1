@@ -3,12 +3,12 @@ def read_file(file_path):
     with open(file_path, 'r') as file:
         return file.read()
     
-def remove_char(text):
-    '''Removes specific characters from the text.'''
-    chars_to_remove = [',','.','\n']
-    for char in chars_to_remove:
-        text = text.replace(char,"")
-    return text
+# def remove_char(text):
+#     '''Removes specific characters from the text.'''
+#     chars_to_remove = [',','.']
+#     for char in chars_to_remove:
+#         text = text.replace(char,"")
+#     return text
 
 def remove_spaces(text):
     chars_to_remove = [' ','\t','\n']
@@ -18,8 +18,17 @@ def remove_spaces(text):
 
 def word_list_gen(text):
     '''Generates a list of words from the text.'''
-    words = remove_char(text).split(" ")
-    return [word.lower() for word in words]
+    word = [] # Stores characters of the current word
+    splitted_words = [] # List to store all words
+    for char in text:
+        if char.isalpha(): # Only letters are part of words
+            word.append(char)
+        else:
+            if word:  # Only append if word is not empty
+                splitted_words.append(''.join(word))
+                word = [] # Reset for the next word
+    return [w.lower() for w in splitted_words if w]  
+
 
 def word_count(text):
     '''Counts the number of words in the text.
@@ -72,10 +81,8 @@ def printer(file_content):
 
 
 
-
-
-# Read data from the file called input.txt
-# Read it into a variable
+# Read data from the file called input.txt  
 file_content = read_file('inputs/input_1.txt')
-printer(file_content)
+# printer(file_content)
+print(word_list_gen(file_content))
 
