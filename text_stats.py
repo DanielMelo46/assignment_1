@@ -4,6 +4,11 @@ def read_file(file_path):
     with open(file_path, 'r') as file:
         return file.read()
 
+def write_file(file_path, content):
+    '''Writes the given content to a file.'''
+    with open(file_path, 'w') as file:
+        file.write(content)
+
 def remove_spaces(text):
     chars_to_remove = [' ','\t','\n']
     for char in chars_to_remove:
