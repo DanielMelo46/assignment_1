@@ -1,4 +1,5 @@
 import os 
+
 def read_file(file_path):
     '''Reads the content of a file and returns it as a string.'''
     with open(file_path, 'r') as file:
@@ -81,6 +82,13 @@ def printer(file_content):
     )
 
 # Read data from the file called input.txt
-for file in list(os.listdir('inputs')):
-    file_content = read_file(f'inputs/{file}')
-    printer(file_content + '\n')
+def main():
+    for i, file in enumerate(list(os.listdir('inputs'))):
+        # Read the content of the file
+        file_content = read_file(f'inputs/{file}')
+        report = printer(file_content + '\n')
+        # Write the report to an output file
+        write_file(f'outputs/output_{i}.txt', report)
+        
+#Execution
+main()
