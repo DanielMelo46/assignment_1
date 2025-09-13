@@ -89,6 +89,7 @@ def main():
         report = printer(file_content)
         # Write the report to an output file
         write_file(f'outputs/output_{i + 1}.txt', report)
+        print(f'output_{i + 1}.txt: \n{report}\n')
 
 #Execution
 main()
